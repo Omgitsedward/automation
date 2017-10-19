@@ -17,3 +17,15 @@ for sym,w,h in (('*',4,4), ('0',20,5), ('x',1,3),('ZZ',3,3)):
 		boxPrint(sym,w,h)
 	except Exception as err:
 		print('An exception happened: ' + str(err))
+
+
+# Adding traceback exception file creation
+import traceback
+try:
+	raise Exception('This is the error message.')
+except:
+	errorFile = open('errorInfo.txt','w')
+	errorFile.write(traceback.format_exc())
+	errorFile.close()
+	print('The traceback info was written to errorInfo.txt.')
+

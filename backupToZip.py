@@ -37,3 +37,4 @@ def backupToZip(folder):
 	print('Done.')
 
 backupToZip('./Documents/Python/Automate/part_2')
+#testing git command
